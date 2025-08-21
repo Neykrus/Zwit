@@ -60,6 +60,7 @@
             width: 150px;
             height: auto;
             border-radius: 3px;
+            cursor: pointer;
         }
         .address-header {
             background-color: #e7f3fe;
@@ -125,6 +126,40 @@
         #save-btn:hover {
             background-color: #0056b3;
         }
+        /* Modal (Lightbox) Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -151,20 +186,28 @@
         </tbody>
     </table>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
     <script>
-        // Default data structure if nothing is saved in localStorage
         const defaultEquipmentData = [
-            // This array will be populated with all your data
-            {
-                address: "Юности 72",
-                items: [
-                    { details: ["19.08.2025", "Юности 72", "Оборудование", "73х112", "123х115х123", "94", ""], photos: [{type: 'path', value: "photo_37@19-08-2025_09-56-32"}, {type: 'path', value: "photo_38@19-08-2025_09-56-32"}, {type: 'path', value: "photo_39@19-08-2025_09-56-32"}, {type: 'path', value: "photo_40@19-08-2025_09-56-32"}, {type: 'path', value: "photo_41@19-08-2025_09-56-32"}] },
-                    { details: ["19.08.2025", "Юности 72", "Оборудование", "62х231", "241х105х123", "92", ""], photos: [{type: 'path', value: "photo_43@19-08-2025_10-06-05"}, {type: 'path', value: "photo_44@19-08-2025_10-06-05"}, {type: 'path', value: "photo_45@19-08-2025_10-06-05"}, {type: 'path', value: "photo_46@19-08-2025_10-06-05"}, {type: 'path', value: "photo_47@19-08-2025_10-06-05"}] },
-                    // ... Add all other items for all addresses
-                ]
-            },
-             // ... Add all other address groups
-        ];
+    {
+        address: "Юности 72",
+        items: [
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "73х112", "123х115х123", "94", ""], photos: [{type: 'path', value: "photo_37@19-08-2025_09-56-32"}, {type: 'path', value: "photo_38@19-08-2025_09-56-32"}, {type: 'path', value: "photo_39@19-08-2025_09-56-32"}, {type: 'path', value: "photo_40@19-08-2025_09-56-32"}, {type: 'path', value: "photo_41@19-08-2025_09-56-32"}] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "62х231", "241х105х123", "92", ""], photos: [{type: 'path', value: "photo_43@19-08-2025_10-06-05"}, {type: 'path', value: "photo_44@19-08-2025_10-06-05"}, {type: 'path', value: "photo_45@19-08-2025_10-06-05"}, {type: 'path', value: "photo_46@19-08-2025_10-06-05"}, {type: 'path', value: "photo_47@19-08-2025_10-06-05"}] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "67х202", "221х110х126", "91", ""], photos: [{type: 'path', value: "photo_48@19-08-2025_10-08-43"}, {type: 'path', value: "photo_49@19-08-2025_10-08-43"}, {type: 'path', value: "photo_50@19-08-2025_10-08-43"}, {type: 'path', value: "photo_51@19-08-2025_10-08-43"}, {type: 'path', value: "photo_52@19-08-2025_10-08-43"}, {type: 'path', value: "photo_53@19-08-2025_10-08-43"}] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "65х145", "155х117х126", "91", ""], photos: [{type: 'path', value: "photo_55@19-08-2025_10-12-34"}, {type: 'path', value: "photo_56@19-08-2025_10-12-34"}, {type: 'path', value: "photo_57@19-08-2025_10-12-34"}, {type: 'path', value: "photo_58@19-08-2025_10-12-34"}, {type: 'path', value: "photo_59@19-08-2025_10-12-34"}, {type: 'path', value: "photo_60@19-08-2025_10-12-34"}] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "58х57", "130х75х215", "-", ""], photos: [{type: 'path', value: "photo_61@19-08-2025_10-15-50"}, {type: 'path', value: "photo_62@19-08-2025_10-16-05"}] },
+            { details: ["19.08.2025", "Юности 72", "Кондиционер (старый)", "-", "-", "-", ""], photos: [{type: 'path', value: "photo_63@19-08-2025_10-17-44"}, {type: 'path', value: "photo_64@19-08-2025_10-17-44"}, {type: 'path', value: "photo_65@19-08-2025_10-17-44"}] },
+            { details: ["19.08.2025", "Юности 72", "Кондиционер (новый 24)", "-", "-", "-", ""], photos: [{type: 'path', value: "photo_66@19-08-2025_10-19-07"}, {type: 'path', value: "photo_67@19-08-2025_10-19-07"}, {type: 'path', value: "photo_68@19-08-2025_10-19-07"}, {type: 'path', value: "photo_69@19-08-2025_10-19-07"}] }
+        ]
+    },
+    // ... (rest of the data)
+];
 
         let currentData;
 
@@ -208,18 +251,14 @@
             const photoContainer = document.createElement('div');
             photoContainer.className = 'photo-container';
             
-            let imgSrc, linkHref;
+            let imgSrc, fullImgSrc;
             if (photo.type === 'path') {
                 imgSrc = `photos/${photo.value}_thumb.jpg`;
-                linkHref = `photos/${photo.value}.jpg`;
+                fullImgSrc = `photos/${photo.value}.jpg`;
             } else { // base64
                 imgSrc = photo.value;
-                linkHref = photo.value;
+                fullImgSrc = photo.value;
             }
-
-            const link = document.createElement('a');
-            link.href = linkHref;
-            link.target = '_blank';
 
             const img = document.createElement('img');
             img.src = imgSrc;
@@ -227,6 +266,12 @@
                 this.onerror = null;
                 this.src = 'https://placehold.co/150x113/eee/ccc?text=Фото+не+найдено';
             };
+            img.addEventListener('click', () => {
+                const modal = document.getElementById("myModal");
+                const modalImg = document.getElementById("modal-img");
+                modal.style.display = "block";
+                modalImg.src = fullImgSrc;
+            });
 
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'delete-btn';
@@ -236,8 +281,7 @@
                 renderTable(currentData);
             });
             
-            link.appendChild(img);
-            photoContainer.appendChild(link);
+            photoContainer.appendChild(img);
             photoContainer.appendChild(deleteBtn);
             return photoContainer;
         }
@@ -313,13 +357,23 @@
             if (savedData) {
                 currentData = JSON.parse(savedData);
             } else {
-                // NOTE: You would need to populate this defaultEquipmentData with your full dataset
-                // For this example, I'm keeping it short.
                 currentData = defaultEquipmentData;
             }
             renderTable(currentData);
             
             document.getElementById('save-btn').addEventListener('click', saveData);
+
+            // Modal close logic
+            const modal = document.getElementById("myModal");
+            const span = document.getElementsByClassName("close-modal")[0];
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         });
     </script>
 </body>
