@@ -89,16 +89,24 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .photo-container:hover .delete-btn {
+            opacity: 1;
         }
         .add-photo-btn {
             display: inline-block;
+            vertical-align: middle;
             margin: 5px;
-            padding: 10px;
+            width: 50px;
+            height: 50px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -117,142 +125,168 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Юности 72 -->
-            <tr><td colspan="7" class="address-header">Юности 72</td></tr>
-            <tr>
-                <td class="editable">19.08.2025</td><td class="editable">Юности 72</td><td class="editable">Оборудование</td><td class="editable">73х112</td><td class="editable">123х115х123</td><td class="editable">94</td><td class="editable"></td>
-            </tr>
-            <tr>
-                <td colspan="7" class="photos-cell">
-                    <div class="photo-container">
-                        <a href="photos/photo_37@19-08-2025_09-56-32.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_38@19-08-2025_09-56-32.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_39@19-08-2025_09-56-32.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_40@19-08-2025_09-56-32.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_41@19-08-2025_09-56-32.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <button class="add-photo-btn">+</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="editable">19.08.2025</td><td class="editable">Юности 72</td><td class="editable">Оборудование</td><td class="editable">62х231</td><td class="editable">241х105х123</td><td class="editable">92</td><td class="editable"></td>
-            </tr>
-            <tr>
-                <td colspan="7" class="photos-cell">
-                    <div class="photo-container">
-                        <a href="photos/photo_43@19-08-2025_10-06-05.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_44@19-08-2025_10-06-05.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_45@19-08-2025_10-06-05.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_46@19-08-2025_10-06-05.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                        <button class="delete-btn">x</button>
-                    </div>
-                    <div class="photo-container">
-                        <a href="photos/photo_47@19-08-2025_10-06-05.jpg" target="_blank"><img src="https://placehold.co/150x113/eee/ccc?text=Фото"></a>
-                         <button class="delete-btn">x</button>
-                    </div>
-                     <button class="add-photo-btn">+</button>
-                </td>
-            </tr>
-            <!-- Другие строки таблицы -->
+            <!-- Data from index.html will be dynamically populated here -->
         </tbody>
     </table>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Реализация редактирования текста
-            const editableCells = document.querySelectorAll('.editable');
-            editableCells.forEach(cell => {
-                cell.addEventListener('click', function() {
-                    if (!cell.querySelector('input')) {
-                        const currentValue = cell.textContent;
-                        const input = document.createElement('input');
-                        input.type = 'text';
-                        input.value = currentValue;
-                        cell.textContent = '';
-                        cell.appendChild(input);
-                        input.focus();
+        const equipmentData = [
+    {
+        address: "Юности 72",
+        items: [
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "73х112", "123х115х123", "94", ""], photos: ["photo_37@19-08-2025_09-56-32", "photo_38@19-08-2025_09-56-32", "photo_39@19-08-2025_09-56-32", "photo_40@19-08-2025_09-56-32", "photo_41@19-08-2025_09-56-32"] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "62х231", "241х105х123", "92", ""], photos: ["photo_43@19-08-2025_10-06-05", "photo_44@19-08-2025_10-06-05", "photo_45@19-08-2025_10-06-05", "photo_46@19-08-2025_10-06-05", "photo_47@19-08-2025_10-06-05"] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "67х202", "221х110х126", "91", ""], photos: ["photo_48@19-08-2025_10-08-43", "photo_49@19-08-2025_10-08-43", "photo_50@19-08-2025_10-08-43", "photo_51@19-08-2025_10-08-43", "photo_52@19-08-2025_10-08-43", "photo_53@19-08-2025_10-08-43"] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "65х145", "155х117х126", "91", ""], photos: ["photo_55@19-08-2025_10-12-34", "photo_56@19-08-2025_10-12-34", "photo_57@19-08-2025_10-12-34", "photo_58@19-08-2025_10-12-34", "photo_59@19-08-2025_10-12-34", "photo_60@19-08-2025_10-12-34"] },
+            { details: ["19.08.2025", "Юности 72", "Оборудование", "58х57", "130х75х215", "-", ""], photos: ["photo_61@19-08-2025_10-15-50", "photo_62@19-08-2025_10-16-05"] },
+            { details: ["19.08.2025", "Юности 72", "Кондиционер (старый)", "-", "-", "-", ""], photos: ["photo_63@19-08-2025_10-17-44", "photo_64@19-08-2025_10-17-44", "photo_65@19-08-2025_10-17-44"] },
+            { details: ["19.08.2025", "Юности 72", "Кондиционер (новый 24)", "-", "-", "-", ""], photos: ["photo_66@19-08-2025_10-19-07", "photo_67@19-08-2025_10-19-07", "photo_68@19-08-2025_10-19-07", "photo_69@19-08-2025_10-19-07"] }
+        ]
+    },
+    {
+        address: "Юности 137",
+        items: [
+            { details: ["19.08.2025", "Юности 137", "Оборудование", "67х?", "235х110х129", "94", ""], photos: ["photo_70@19-08-2025_10-29-51", "photo_71@19-08-2025_10-29-51", "photo_72@19-08-2025_10-29-51", "photo_73@19-08-2025_10-29-51", "photo_74@19-08-2025_10-29-51", "photo_75@19-08-2025_10-29-51", "photo_76@19-08-2025_10-29-51"] },
+            { details: ["19.08.2025", "Юности 137", "Кондиционер (старый)", "-", "-", "-", ""], photos: ["photo_77@19-08-2025_10-30-49", "photo_78@19-08-2025_10-30-49", "photo_79@19-08-2025_10-32-23", "photo_80@19-08-2025_10-32-39", "photo_81@19-08-2025_10-32-39"] },
+            { details: ["19.08.2025", "Юности 137", "Оборудование", "50х65", "75х77х210", "-", ""], photos: ["photo_82@19-08-2025_10-35-41", "photo_83@19-08-2025_10-35-41", "photo_84@19-08-2025_10-35-41"] }
+        ]
+    },
+    // ... Add all other addresses and items here in the same format
+];
 
-                        input.addEventListener('blur', function() {
-                            cell.textContent = input.value;
-                        });
+        function makeCellEditable(cell) {
+            cell.addEventListener('click', function() {
+                if (cell.querySelector('input')) return;
+                const currentValue = cell.textContent;
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = currentValue;
+                input.style.width = '90%';
+                cell.textContent = '';
+                cell.appendChild(input);
+                input.focus();
 
-                        input.addEventListener('keydown', function(e) {
-                            if (e.key === 'Enter') {
-                                cell.textContent = input.value;
-                            }
-                        });
+                const save = () => {
+                    cell.textContent = input.value;
+                };
+
+                input.addEventListener('blur', save);
+                input.addEventListener('keydown', e => {
+                    if (e.key === 'Enter') {
+                        input.blur();
                     }
                 });
             });
+        }
 
-            // Реализация удаления фото
-            document.querySelectorAll('.delete-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    this.parentElement.remove();
+        function createPhotoElement(photoName) {
+            const photoContainer = document.createElement('div');
+            photoContainer.className = 'photo-container';
+
+            const link = document.createElement('a');
+            link.href = `photos/${photoName}.jpg`;
+            link.target = '_blank';
+
+            const img = document.createElement('img');
+            img.src = `photos/${photoName}_thumb.jpg`;
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = 'https://placehold.co/150x113/eee/ccc?text=Фото+не+найдено';
+            };
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.textContent = 'x';
+            deleteBtn.addEventListener('click', () => photoContainer.remove());
+            
+            link.appendChild(img);
+            photoContainer.appendChild(link);
+            photoContainer.appendChild(deleteBtn);
+            return photoContainer;
+        }
+
+        function createAddPhotoButton() {
+            const addBtn = document.createElement('button');
+            addBtn.className = 'add-photo-btn';
+            addBtn.textContent = '+';
+            addBtn.addEventListener('click', function() {
+                const fileInput = document.createElement('input');
+                fileInput.type = 'file';
+                fileInput.accept = 'image/*';
+                fileInput.onchange = e => {
+                    const file = e.target.files[0];
+                    if (!file) return;
+                    const reader = new FileReader();
+                    reader.onload = readerEvent => {
+                        const newPhotoContainer = document.createElement('div');
+                        newPhotoContainer.className = 'photo-container';
+                        
+                        const newLink = document.createElement('a');
+                        newLink.href = readerEvent.target.result;
+                        newLink.target = '_blank';
+                        
+                        const newImg = document.createElement('img');
+                        newImg.src = readerEvent.target.result;
+                        
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.className = 'delete-btn';
+                        deleteBtn.textContent = 'x';
+                        deleteBtn.onclick = () => newPhotoContainer.remove();
+
+                        newLink.appendChild(newImg);
+                        newPhotoContainer.appendChild(newLink);
+                        newPhotoContainer.appendChild(deleteBtn);
+                        
+                        this.before(newPhotoContainer);
+                    };
+                    reader.readAsDataURL(file);
+                };
+                fileInput.click();
+            });
+            return addBtn;
+        }
+
+        function renderTable() {
+            const tbody = document.querySelector('table tbody');
+            tbody.innerHTML = ''; // Clear existing content
+
+            equipmentData.forEach(group => {
+                const headerRow = document.createElement('tr');
+                const headerCell = document.createElement('td');
+                headerCell.colSpan = 7;
+                headerCell.className = 'address-header';
+                headerCell.textContent = group.address;
+                headerRow.appendChild(headerCell);
+                tbody.appendChild(headerRow);
+
+                group.items.forEach(item => {
+                    const detailsRow = document.createElement('tr');
+                    item.details.forEach(text => {
+                        const cell = document.createElement('td');
+                        cell.className = 'editable';
+                        cell.textContent = text;
+                        makeCellEditable(cell);
+                        detailsRow.appendChild(cell);
+                    });
+                    tbody.appendChild(detailsRow);
+
+                    const photosRow = document.createElement('tr');
+                    const photosCell = document.createElement('td');
+                    photosCell.colSpan = 7;
+                    photosCell.className = 'photos-cell';
+
+                    item.photos.forEach(photoName => {
+                        photosCell.appendChild(createPhotoElement(photoName));
+                    });
+                    
+                    photosCell.appendChild(createAddPhotoButton());
+                    photosRow.appendChild(photosCell);
+                    tbody.appendChild(photosRow);
                 });
             });
+        }
 
-            // Реализация добавления фото
-            document.querySelectorAll('.add-photo-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const fileInput = document.createElement('input');
-                    fileInput.type = 'file';
-                    fileInput.accept = 'image/*';
-                    fileInput.onchange = e => {
-                        const file = e.target.files[0];
-                        const reader = new FileReader();
-                        reader.onload = readerEvent => {
-                            const newPhotoContainer = document.createElement('div');
-                            newPhotoContainer.className = 'photo-container';
-                            
-                            const newLink = document.createElement('a');
-                            newLink.href = readerEvent.target.result;
-                            newLink.target = '_blank';
-                            
-                            const newImg = document.createElement('img');
-                            newImg.src = readerEvent.target.result;
-                            
-                            const deleteBtn = document.createElement('button');
-                            deleteBtn.className = 'delete-btn';
-                            deleteBtn.textContent = 'x';
-                            deleteBtn.onclick = function() {
-                                this.parentElement.remove();
-                            };
-
-                            newLink.appendChild(newImg);
-                            newPhotoContainer.appendChild(newLink);
-                            newPhotoContainer.appendChild(deleteBtn);
-                            
-                            this.before(newPhotoContainer);
-                        }
-                        reader.readAsDataURL(file);
-                    }
-                    fileInput.click();
-                });
-            });
-        });
+        document.addEventListener('DOMContentLoaded', renderTable);
     </script>
 </body>
 </html>
