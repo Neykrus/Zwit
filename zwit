@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіт по Обладнанню</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tbody tr:nth-child(4n-3), tbody tr:nth-child(4n-2) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:nth-child(4n-1), tbody tr:nth-child(4n) {
+            background-color: #ffffff;
+        }
+        tr:hover {
+            background-color: #e2e2e2 !important;
+        }
+        .photos-cell {
+            padding: 10px;
+        }
+        .photos-cell a {
+            display: inline-block;
+            margin: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s, border-color 0.2s;
+            line-height: 0;
+        }
+        .photos-cell a:hover {
+            transform: scale(1.05);
+            border-color: #4CAF50;
+        }
+        .photos-cell img {
+            width: 150px;
+            height: auto;
+            border-radius: 3px;
+        }
+        .address-header {
+            background-color: #e7f3fe;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #31708f;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Огляд обладнання (19.08.2025 - 20.08.2025)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Адреса</th>
+                <th>Об'єкт</th>
+                <th>Викладка (см)</th>
+                <th>Габарити (ШхГхВ, см)</th>
+                <th>Висота до стійки/полиці (см)</th>
+                <th>Примітки</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="7" class="address-header">Юності 72</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Юності 72</td><td>Обладнання</td><td>73х112</td><td>123х115х123</td><td>94</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_37@19-08-2025_09-56-32.jpg" target="_blank"><img src="photos/photo_37@19-08-2025_09-56-32_thumb.jpg"></a>
+                    <a href="photos/photo_38@19-08-2025_09-56-32.jpg" target="_blank"><img src="photos/photo_38@19-08-2025_09-56-32_thumb.jpg"></a>
+                    <a href="photos/photo_39@19-08-2025_09-56-32.jpg" target="_blank"><img src="photos/photo_39@19-08-2025_09-56-32_thumb.jpg"></a>
+                    <a href="photos/photo_40@19-08-2025_09-56-32.jpg" target="_blank"><img src="photos/photo_40@19-08-2025_09-56-32_thumb.jpg"></a>
+                    <a href="photos/photo_41@19-08-2025_09-56-32.jpg" target="_blank"><img src="photos/photo_41@19-08-2025_09-56-32_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Юності 72</td><td>Обладнання</td><td>62х231</td><td>241х105х123</td><td>92</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_43@19-08-2025_10-06-05.jpg" target="_blank"><img src="photos/photo_43@19-08-2025_10-06-05_thumb.jpg"></a>
+                    <a href="photos/photo_44@19-08-2025_10-06-05.jpg" target="_blank"><img src="photos/photo_44@19-08-2025_10-06-05_thumb.jpg"></a>
+                    <a href="photos/photo_45@19-08-2025_10-06-05.jpg" target="_blank"><img src="photos/photo_45@19-08-2025_10-06-05_thumb.jpg"></a>
+                    <a href="photos/photo_46@19-08-2025_10-06-05.jpg" target="_blank"><img src="photos/photo_46@19-08-2025_10-06-05_thumb.jpg"></a>
+                    <a href="photos/photo_47@19-08-2025_10-06-05.jpg" target="_blank"><img src="photos/photo_47@19-08-2025_10-06-05_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Юності 72</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_63@19-08-2025_10-17-44.jpg" target="_blank"><img src="photos/photo_63@19-08-2025_10-17-44_thumb.jpg"></a>
+                    <a href="photos/photo_64@19-08-2025_10-17-44.jpg" target="_blank"><img src="photos/photo_64@19-08-2025_10-17-44_thumb.jpg"></a>
+                    <a href="photos/photo_65@19-08-2025_10-17-44.jpg" target="_blank"><img src="photos/photo_65@19-08-2025_10-17-44_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>19.08.2025</td><td>Юності 72</td><td>Кондиціонер (новий 24)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_66@19-08-2025_10-19-07.jpg" target="_blank"><img src="photos/photo_66@19-08-2025_10-19-07_thumb.jpg"></a>
+                    <a href="photos/photo_67@19-08-2025_10-19-07.jpg" target="_blank"><img src="photos/photo_67@19-08-2025_10-19-07_thumb.jpg"></a>
+                    <a href="photos/photo_68@19-08-2025_10-19-07.jpg" target="_blank"><img src="photos/photo_68@19-08-2025_10-19-07_thumb.jpg"></a>
+                    <a href="photos/photo_69@19-08-2025_10-19-07.jpg" target="_blank"><img src="photos/photo_69@19-08-2025_10-19-07_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Юності 137</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Юності 137</td><td>Обладнання</td><td>67х?</td><td>235х110х129</td><td>94</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_70@19-08-2025_10-29-51.jpg" target="_blank"><img src="photos/photo_70@19-08-2025_10-29-51_thumb.jpg"></a>
+                    <a href="photos/photo_71@19-08-2025_10-29-51.jpg" target="_blank"><img src="photos/photo_71@19-08-2025_10-29-51_thumb.jpg"></a>
+                    <a href="photos/photo_72@19-08-2025_10-29-51.jpg" target="_blank"><img src="photos/photo_72@19-08-2025_10-29-51_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Юності 137</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_77@19-08-2025_10-30-49.jpg" target="_blank"><img src="photos/photo_77@19-08-2025_10-30-49_thumb.jpg"></a>
+                    <a href="photos/photo_78@19-08-2025_10-30-49.jpg" target="_blank"><img src="photos/photo_78@19-08-2025_10-30-49_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Молочна 86</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Молочна 86</td><td>Обладнання</td><td>67х190</td><td>203х108х126</td><td>94</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_85@19-08-2025_10-47-15.jpg" target="_blank"><img src="photos/photo_85@19-08-2025_10-47-15_thumb.jpg"></a>
+                    <a href="photos/photo_86@19-08-2025_10-47-15.jpg" target="_blank"><img src="photos/photo_86@19-08-2025_10-47-15_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>19.08.2025</td><td>Молочна 86</td><td>Обладнання</td><td>76х240</td><td>154х110х138</td><td>95</td><td>Гнилий</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_94@19-08-2025_10-58-23.jpg" target="_blank"><img src="photos/photo_94@19-08-2025_10-58-23_thumb.jpg"></a>
+                    <a href="photos/photo_95@19-08-2025_10-58-23.jpg" target="_blank"><img src="photos/photo_95@19-08-2025_10-58-23_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Молочна 71</td></tr>
+             <tr>
+                <td>19.08.2025</td><td>Молочна 71</td><td>Обладнання (4шт.)</td><td>190х85</td><td>200х120х130</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_106@19-08-2025_11-14-35.jpg" target="_blank"><img src="photos/photo_106@19-08-2025_11-14-35_thumb.jpg"></a>
+                    <a href="photos/photo_107@19-08-2025_11-14-35.jpg" target="_blank"><img src="photos/photo_107@19-08-2025_11-14-35_thumb.jpg"></a>
+                    <a href="photos/photo_108@19-08-2025_11-14-35.jpg" target="_blank"><img src="photos/photo_108@19-08-2025_11-14-35_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Молочна 71</td><td>Кондиціонер</td><td>-</td><td>-</td><td>-</td><td>Наружный блок скрыт</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_113@19-08-2025_11-18-57.jpg" target="_blank"><img src="photos/photo_113@19-08-2025_11-18-57_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr><td colspan="7" class="address-header">Освітянська 18</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Освітянська 18</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_114@19-08-2025_11-45-16.jpg" target="_blank"><img src="photos/photo_114@19-08-2025_11-45-16_thumb.jpg"></a>
+                    <a href="photos/photo_115@19-08-2025_11-45-16.jpg" target="_blank"><img src="photos/photo_115@19-08-2025_11-45-16_thumb.jpg"></a>
+                    <a href="photos/photo_116@19-08-2025_11-45-23.jpg" target="_blank"><img src="photos/photo_116@19-08-2025_11-45-23_thumb.jpg"></a>
+                    <a href="photos/photo_117@19-08-2025_11-45-23.jpg" target="_blank"><img src="photos/photo_117@19-08-2025_11-45-23_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr><td colspan="7" class="address-header">Передатка</td></tr>
+             <tr>
+                <td>19.08.2025</td><td>Передатка</td><td>Обладнання (2шт.)</td><td>(250х89)+(180х89)</td><td>(258/190)х110х113</td><td>85</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_121@19-08-2025_12-15-38.jpg" target="_blank"><img src="photos/photo_121@19-08-2025_12-15-38_thumb.jpg"></a>
+                    <a href="photos/photo_122@19-08-2025_12-15-38.jpg" target="_blank"><img src="photos/photo_122@19-08-2025_12-15-38_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Передатка</td><td>Обладнання</td><td>140х65+(110х65)</td><td>275х110х123</td><td>90</td><td>Діагональ, биті стекла</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_132@19-08-2025_12-52-18.jpg" target="_blank"><img src="photos/photo_132@19-08-2025_12-52-18_thumb.jpg"></a>
+                    <a href="photos/photo_133@19-08-2025_12-52-18.jpg" target="_blank"><img src="photos/photo_133@19-08-2025_12-52-18_thumb.jpg"></a>
+                    <a href="photos/photo_134@19-08-2025_12-52-18.jpg" target="_blank"><img src="photos/photo_134@19-08-2025_12-52-18_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Передатка</td><td>Кондиціонер (новий 24)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_126@19-08-2025_12-22-53.jpg" target="_blank"><img src="photos/photo_126@19-08-2025_12-22-53_thumb.jpg"></a>
+                    <a href="photos/photo_127@19-08-2025_12-22-53.jpg" target="_blank"><img src="photos/photo_127@19-08-2025_12-22-53_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Корищенка</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Корищенка</td><td>Обладнання</td><td>195х70</td><td>205х110х124</td><td>93</td><td>Компресор відповідає моделі</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_142@19-08-2025_13-13-55.jpg" target="_blank"><img src="photos/photo_142@19-08-2025_13-13-55_thumb.jpg"></a>
+                    <a href="photos/photo_143@19-08-2025_13-13-55.jpg" target="_blank"><img src="photos/photo_143@19-08-2025_13-13-55_thumb.jpg"></a>
+                    <a href="photos/photo_144@19-08-2025_13-13-55.jpg" target="_blank"><img src="photos/photo_144@19-08-2025_13-13-55_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Карпенко-Карого</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Карпенко-Карого</td><td>Обладнання</td><td>145х65</td><td>150х92х126</td><td>86</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_147@19-08-2025_13-22-50.jpg" target="_blank"><img src="photos/photo_147@19-08-2025_13-22-50_thumb.jpg"></a>
+                    <a href="photos/photo_148@19-08-2025_13-22-51.jpg" target="_blank"><img src="photos/photo_148@19-08-2025_13-22-51_thumb.jpg"></a>
+                    <a href="photos/photo_149@19-08-2025_13-22-51.jpg" target="_blank"><img src="photos/photo_149@19-08-2025_13-22-51_thumb.jpg"></a>
+                    <a href="photos/photo_150@19-08-2025_13-22-51.jpg" target="_blank"><img src="photos/photo_150@19-08-2025_13-22-51_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Магістральна</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Магістральна</td><td>Обладнання</td><td>190х80</td><td>198,5х120х129</td><td>93</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_151@19-08-2025_13-57-00.jpg" target="_blank"><img src="photos/photo_151@19-08-2025_13-57-00_thumb.jpg"></a>
+                    <a href="photos/photo_152@19-08-2025_13-57-00.jpg" target="_blank"><img src="photos/photo_152@19-08-2025_13-57-00_thumb.jpg"></a>
+                    <a href="photos/photo_153@19-08-2025_13-57-00.jpg" target="_blank"><img src="photos/photo_153@19-08-2025_13-57-00_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>19.08.2025</td><td>Магістральна</td><td>Обладнання</td><td>190х82</td><td>200х120х93</td><td>-</td><td>Немає верхньої планки</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_165@19-08-2025_14-12-32.jpg" target="_blank"><img src="photos/photo_165@19-08-2025_14-12-32_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Магістральна</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_166@19-08-2025_14-13-36.jpg" target="_blank"><img src="photos/photo_166@19-08-2025_14-13-36_thumb.jpg"></a>
+                    <a href="photos/photo_167@19-08-2025_14-13-36.jpg" target="_blank"><img src="photos/photo_167@19-08-2025_14-13-36_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Фортечна</td></tr>
+             <tr>
+                <td>19.08.2025</td><td>Фортечна</td><td>Обладнання</td><td>(143х65)+(145х65)</td><td>300х110х124</td><td>93</td><td>Двокомпресорний</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_175@19-08-2025_14-33-05.jpg" target="_blank"><img src="photos/photo_175@19-08-2025_14-33-05_thumb.jpg"></a>
+                    <a href="photos/photo_176@19-08-2025_14-33-05.jpg" target="_blank"><img src="photos/photo_176@19-08-2025_14-33-05_thumb.jpg"></a>
+                    <a href="photos/photo_177@19-08-2025_14-33-05.jpg" target="_blank"><img src="photos/photo_177@19-08-2025_14-33-05_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>19.08.2025</td><td>Фортечна</td><td>Кондиціонер (старий 24)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_181@19-08-2025_14-35-18.jpg" target="_blank"><img src="photos/photo_181@19-08-2025_14-35-18_thumb.jpg"></a>
+                    <a href="photos/photo_182@19-08-2025_14-35-18.jpg" target="_blank"><img src="photos/photo_182@19-08-2025_14-35-18_thumb.jpg"></a>
+                    <a href="photos/photo_183@19-08-2025_14-35-18.jpg" target="_blank"><img src="photos/photo_183@19-08-2025_14-35-18_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Фільтрова</td></tr>
+            <tr>
+                <td>19.08.2025</td><td>Фільтрова</td><td>Обладнання</td><td>144х70</td><td>158х106х124</td><td>94</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_192@19-08-2025_15-20-08.jpg" target="_blank"><img src="photos/photo_192@19-08-2025_15-20-08_thumb.jpg"></a>
+                    <a href="photos/photo_193@19-08-2025_15-20-08.jpg" target="_blank"><img src="photos/photo_193@19-08-2025_15-20-08_thumb.jpg"></a>
+                    <a href="photos/photo_194@19-08-2025_15-20-08.jpg" target="_blank"><img src="photos/photo_194@19-08-2025_15-20-08_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>19.08.2025</td><td>Фільтрова</td><td>Обладнання</td><td>195х65</td><td>205х110х130</td><td>95</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_196@19-08-2025_15-23-06.jpg" target="_blank"><img src="photos/photo_196@19-08-2025_15-23-06_thumb.jpg"></a>
+                    <a href="photos/photo_197@19-08-2025_15-23-06.jpg" target="_blank"><img src="photos/photo_197@19-08-2025_15-23-06_thumb.jpg"></a>
+                    <a href="photos/photo_198@19-08-2025_15-23-06.jpg" target="_blank"><img src="photos/photo_198@19-08-2025_15-23-06_thumb.jpg"></a>
+                    <a href="photos/photo_199@19-08-2025_15-23-06.jpg" target="_blank"><img src="photos/photo_199@19-08-2025_15-23-06_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr><td colspan="7" class="address-header">БГ</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>БГ</td><td>Обладнання (4шт.)</td><td>63х190</td><td>202х100х127</td><td>99</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_200@20-08-2025_09-33-42.jpg" target="_blank"><img src="photos/photo_200@20-08-2025_09-33-42_thumb.jpg"></a>
+                    <a href="photos/photo_201@20-08-2025_09-33-42.jpg" target="_blank"><img src="photos/photo_201@20-08-2025_09-33-42_thumb.jpg"></a>
+                    <a href="photos/photo_202@20-08-2025_09-33-42.jpg" target="_blank"><img src="photos/photo_202@20-08-2025_09-33-42_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>20.08.2025</td><td>БГ</td><td>Кондиціонер (новий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_212@20-08-2025_09-47-03.jpg" target="_blank"><img src="photos/photo_212@20-08-2025_09-47-03_thumb.jpg"></a>
+                    <a href="photos/photo_213@20-08-2025_09-48-13.jpg" target="_blank"><img src="photos/photo_213@20-08-2025_09-48-13_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Дружня 2</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>Дружня 2</td><td>Обладнання</td><td>89х(156+190)</td><td>355х110х113</td><td>85</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_220@20-08-2025_10-29-17.jpg" target="_blank"><img src="photos/photo_220@20-08-2025_10-29-17_thumb.jpg"></a>
+                    <a href="photos/photo_221@20-08-2025_10-29-17.jpg" target="_blank"><img src="photos/photo_221@20-08-2025_10-29-17_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>20.08.2025</td><td>Дружня 2</td><td>Кондиціонер (новий 24)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_232@20-08-2025_10-33-40.jpg" target="_blank"><img src="photos/photo_232@20-08-2025_10-33-40_thumb.jpg"></a>
+                    <a href="photos/photo_233@20-08-2025_10-33-40.jpg" target="_blank"><img src="photos/photo_233@20-08-2025_10-33-40_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Нижня Хортиця</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>Нижня Хортиця</td><td>Обладнання</td><td>70х150</td><td>162х103х125</td><td>93</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_235@20-08-2025_10-47-11.jpg" target="_blank"><img src="photos/photo_235@20-08-2025_10-47-11_thumb.jpg"></a>
+                    <a href="photos/photo_236@20-08-2025_10-47-11.jpg" target="_blank"><img src="photos/photo_236@20-08-2025_10-47-11_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Нижня Хортиця</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_246@20-08-2025_10-54-41.jpg" target="_blank"><img src="photos/photo_246@20-08-2025_10-54-41_thumb.jpg"></a>
+                    <a href="photos/photo_247@20-08-2025_10-54-41.jpg" target="_blank"><img src="photos/photo_247@20-08-2025_10-54-41_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Мира 79, Розумівка</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Мира 79, Розумівка</td><td>Обладнання</td><td>140х60</td><td>153х100х133</td><td>94</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_254@20-08-2025_11-08-11.jpg" target="_blank"><img src="photos/photo_254@20-08-2025_11-08-11_thumb.jpg"></a>
+                    <a href="photos/photo_255@20-08-2025_11-08-11.jpg" target="_blank"><img src="photos/photo_255@20-08-2025_11-08-11_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Мира 79, Розумівка</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_259@20-08-2025_11-09-36.jpg" target="_blank"><img src="photos/photo_259@20-08-2025_11-09-36_thumb.jpg"></a>
+                    <a href="photos/photo_260@20-08-2025_11-09-36.jpg" target="_blank"><img src="photos/photo_260@20-08-2025_11-09-36_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Миру 37</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>Миру 37</td><td>Обладнання</td><td>195х75</td><td>205х120х139</td><td>93</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_266@20-08-2025_11-17-46.jpg" target="_blank"><img src="photos/photo_266@20-08-2025_11-17-46_thumb.jpg"></a>
+                    <a href="photos/photo_267@20-08-2025_11-17-46.jpg" target="_blank"><img src="photos/photo_267@20-08-2025_11-17-46_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Миру 37</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_275@20-08-2025_11-23-43.jpg" target="_blank"><img src="photos/photo_275@20-08-2025_11-23-43_thumb.jpg"></a>
+                    <a href="photos/photo_276@20-08-2025_11-23-43.jpg" target="_blank"><img src="photos/photo_276@20-08-2025_11-23-43_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Мар'ївка</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Мар'ївка</td><td>Обладнання</td><td>193х73</td><td>205х110х133</td><td>93</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_283@20-08-2025_11-42-00.jpg" target="_blank"><img src="photos/photo_283@20-08-2025_11-42-00_thumb.jpg"></a>
+                    <a href="photos/photo_284@20-08-2025_11-42-00.jpg" target="_blank"><img src="photos/photo_284@20-08-2025_11-42-00_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Нове Запоріжжя 35</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>Нове Запоріжжя 35</td><td>Обладнання</td><td>50х(85+85)</td><td>185х90х110</td><td>90</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_305@20-08-2025_12-33-26.jpg" target="_blank"><img src="photos/photo_305@20-08-2025_12-33-26_thumb.jpg"></a>
+                    <a href="photos/photo_306@20-08-2025_12-33-26.jpg" target="_blank"><img src="photos/photo_306@20-08-2025_12-33-26_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>20.08.2025</td><td>Нове Запоріжжя 35</td><td>Кондиціонер (новий 24)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_317@20-08-2025_12-39-47.jpg" target="_blank"><img src="photos/photo_317@20-08-2025_12-39-47_thumb.jpg"></a>
+                    <a href="photos/photo_318@20-08-2025_12-39-47.jpg" target="_blank"><img src="photos/photo_318@20-08-2025_12-39-47_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Широке</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Широке</td><td>Обладнання</td><td>174х70</td><td>183х105х124</td><td>95</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_338@20-08-2025_13-28-39.jpg" target="_blank"><img src="photos/photo_338@20-08-2025_13-28-39_thumb.jpg"></a>
+                    <a href="photos/photo_339@20-08-2025_13-28-39.jpg" target="_blank"><img src="photos/photo_339@20-08-2025_13-28-39_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Широке</td><td>Кондиціонер (старий 12)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_342@20-08-2025_13-29-18.jpg" target="_blank"><img src="photos/photo_342@20-08-2025_13-29-18_thumb.jpg"></a>
+                    <a href="photos/photo_343@20-08-2025_13-29-18.jpg" target="_blank"><img src="photos/photo_343@20-08-2025_13-29-18_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Володимир</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>Володимир</td><td>Обладнання</td><td>Основа 65х187, полиця 190х43</td><td>205х87х195</td><td>65</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_350@20-08-2025_14-02-38.jpg" target="_blank"><img src="photos/photo_350@20-08-2025_14-02-38_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Володимир</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_367@20-08-2025_14-17-59.jpg" target="_blank"><img src="photos/photo_367@20-08-2025_14-17-59_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>20.08.2025</td><td>Володимир</td><td>Кондиціонер (новий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_368@20-08-2025_14-25-56.jpg" target="_blank"><img src="photos/photo_368@20-08-2025_14-25-56_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr><td colspan="7" class="address-header">Синенка 11</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Синенка 11</td><td>Кондиціонер (старий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_379@20-08-2025_14-47-07.jpg" target="_blank"><img src="photos/photo_379@20-08-2025_14-47-07_thumb.jpg"></a>
+                    <a href="photos/photo_380@20-08-2025_14-47-07.jpg" target="_blank"><img src="photos/photo_380@20-08-2025_14-47-07_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Синенка 27</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Синенка 27</td><td>Обладнання</td><td>174х70</td><td>185х110х130</td><td>95</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_396@20-08-2025_15-31-36.jpg" target="_blank"><img src="photos/photo_396@20-08-2025_15-31-36_thumb.jpg"></a>
+                </td>
+            </tr>
+             <tr>
+                <td>20.08.2025</td><td>Синенка 27</td><td>Кондиціонер (новий)</td><td>-</td><td>-</td><td>-</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_402@20-08-2025_15-40-44.jpg" target="_blank"><img src="photos/photo_402@20-08-2025_15-40-44_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">93 бригада</td></tr>
+            <tr>
+                <td>20.08.2025</td><td>93 бригада</td><td>Обладнання</td><td>194х70</td><td>205х110х127</td><td>92</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_408@20-08-2025_16-09-04.jpg" target="_blank"><img src="photos/photo_408@20-08-2025_16-09-04_thumb.jpg"></a>
+                </td>
+            </tr>
+            <tr><td colspan="7" class="address-header">Сергієнка 70</td></tr>
+             <tr>
+                <td>20.08.2025</td><td>Сергієнка 70</td><td>Обладнання</td><td>144х65</td><td>150х91х125</td><td>90</td><td></td>
+            </tr>
+            <tr>
+                <td colspan="7" class="photos-cell">
+                    <a href="photos/photo_417@20-08-2025_16-18-14.jpg" target="_blank"><img src="photos/photo_417@20-08-2025_16-18-14_thumb.jpg"></a>
+                    <a href="photos/photo_418@20-08-2025_16-18-14.jpg" target="_blank"><img src="photos/photo_418@20-08-2025_16-18-14_thumb.jpg"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
