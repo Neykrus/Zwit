@@ -109,22 +109,35 @@
             cursor: pointer;
             font-size: 24px;
         }
-        #save-btn-container {
+        #controls-container {
             text-align: center;
             margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        #save-btn {
+        .control-btn {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        #save-btn {
+            background-color: #007bff;
         }
         #save-btn:hover {
             background-color: #0056b3;
+        }
+        #export-btn {
+            background-color: #28a745;
+        }
+        #export-btn:hover {
+            background-color: #218838;
         }
         /* Modal (Lightbox) Styles */
         .modal {
@@ -165,8 +178,9 @@
 <body>
     <h1>Обзор оборудования (19.08.2025 - 20.08.2025)</h1>
     
-    <div id="save-btn-container">
-        <button id="save-btn">Сохранить изменения</button>
+    <div id="controls-container">
+        <button id="save-btn" class="control-btn">Сохранить изменения</button>
+        <button id="export-btn" class="control-btn">Экспорт данных для GitHub</button>
     </div>
 
     <table>
@@ -612,6 +626,21 @@
             renderTable(currentData);
             
             document.getElementById('save-btn').addEventListener('click', saveData);
+
+            document.getElementById('export-btn').addEventListener('click', () => {
+                const dataString = `const defaultEquipmentData = ${JSON.stringify(currentData, null, 4)};`;
+                const textarea = document.createElement('textarea');
+                textarea.value = dataString;
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    alert('Данные для вставки в файл скопированы в буфер обмена!');
+                } catch (err) {
+                    alert('Не удалось скопировать данные. Пожалуйста, скопируйте вручную.');
+                }
+                document.body.removeChild(textarea);
+            });
 
             // Modal close logic
             const modal = document.getElementById("myModal");
