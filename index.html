@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отчет по Оборудованию</title>
+    <!-- Подключаем библиотеку для работы с Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -133,10 +135,10 @@
         #save-btn:hover {
             background-color: #0056b3;
         }
-        #export-btn {
+        #export-btn, #export-excel-btn {
             background-color: #28a745;
         }
-        #export-btn:hover {
+        #export-btn:hover, #export-excel-btn:hover {
             background-color: #218838;
         }
         /* Modal (Lightbox) Styles */
@@ -181,6 +183,7 @@
     <div id="controls-container">
         <button id="save-btn" class="control-btn">Сохранить изменения</button>
         <button id="export-btn" class="control-btn">Экспорт данных для GitHub</button>
+        <button id="export-excel-btn" class="control-btn">Экспорт в Excel</button>
     </div>
 
     <table>
@@ -616,6 +619,30 @@
             });
         }
 
+        function exportToExcel() {
+            const headers = ["Дата", "Адрес", "Объект", "Выкладка (см)", "Габариты (ШхГхВ, см)", "Высота до стойки/полки (см)", "Примечания", "Фотографии"];
+            const ws_data = [headers];
+
+            currentData.forEach(group => {
+                group.items.forEach(item => {
+                    const photoNames = item.photos.map(p => {
+                        if (p.type === 'path') {
+                            return p.value + '.jpg';
+                        }
+                        return 'Новое фото (локальное)';
+                    }).join(', ');
+                    
+                    const row = [...item.details, photoNames];
+                    ws_data.push(row);
+                });
+            });
+
+            const ws = XLSX.utils.aoa_to_sheet(ws_data);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Отчет");
+            XLSX.writeFile(wb, "Отчет_по_оборудованию.xlsx");
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const savedData = localStorage.getItem('equipmentReportData');
             if (savedData) {
@@ -626,6 +653,7 @@
             renderTable(currentData);
             
             document.getElementById('save-btn').addEventListener('click', saveData);
+            document.getElementById('export-excel-btn').addEventListener('click', exportToExcel);
 
             document.getElementById('export-btn').addEventListener('click', () => {
                 const dataString = `const defaultEquipmentData = ${JSON.stringify(currentData, null, 4)};`;
