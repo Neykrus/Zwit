@@ -621,23 +621,35 @@
 
         function exportToExcel() {
             const headers = ["Дата", "Адрес", "Объект", "Выкладка (см)", "Габариты (ШхГхВ, см)", "Высота до стойки/полки (см)", "Примечания", "Фотографии"];
-            const ws_data = [headers];
+            
+            const ws = XLSX.utils.aoa_to_sheet([headers]);
+            let rowIndex = 2; // Start after header row
 
             currentData.forEach(group => {
                 group.items.forEach(item => {
+                    const rowData = [...item.details];
                     const photoNames = item.photos.map(p => {
-                        if (p.type === 'path') {
-                            return p.value + '.jpg';
-                        }
+                        if (p.type === 'path') return p.value + '.jpg';
                         return 'Новое фото (локальное)';
                     }).join(', ');
                     
-                    const row = [...item.details, photoNames];
-                    ws_data.push(row);
+                    rowData.push(photoNames);
+                    XLSX.utils.sheet_add_aoa(ws, [rowData], {origin: `A${rowIndex}`});
+
+                    // Add hyperlink to the photo cell
+                    const firstPhoto = item.photos.find(p => p.type === 'path');
+                    if (firstPhoto) {
+                        const cellAddress = `H${rowIndex}`;
+                        if (!ws[cellAddress]) ws[cellAddress] = {};
+                        ws[cellAddress].l = { 
+                            Target: `photos/${firstPhoto.value}.jpg`, 
+                            Tooltip: `Открыть ${firstPhoto.value}.jpg` 
+                        };
+                    }
+                    rowIndex++;
                 });
             });
-
-            const ws = XLSX.utils.aoa_to_sheet(ws_data);
+            
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, "Отчет");
             XLSX.writeFile(wb, "Отчет_по_оборудованию.xlsx");
